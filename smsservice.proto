@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message SMS {
+    string receiver = 1;
+    string text = 2;
+    bool noop = 3;
+}
+
+message Empty {
+}
+
+service SMSService {
+  rpc Send (SMS) returns (Empty);
+}
